@@ -2,24 +2,27 @@
 <html>
 <head>
 	<title>InstantConnection</title>
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
 
-<body ng-app="InstantConnection">
- <div class="containe" ng-controller="profileController">
+<body ng-app="InstantConnection" ng-controller="profileController">
+
+<!-- page1 -->
+ <div class="container">
       <select id="test" ng-change="showIf()" ng-model="selectJob" >
       <OPTION >Web Developper</OPTION>
       <OPTION >Plumber</OPTION>
       <OPTION >Dancer</OPTION>
       <OPTION >Gardener</OPTION>
       </select>
-
+      
+<!-- page2 -->
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
         <img ng-src="{{profile.image_url}}">
@@ -37,7 +40,87 @@
  	</div>
  </div>
 
-		<script src="style.css"></script>
+<!-- page3 -->
+<section class="section btop" id="theteam"><a name="theteam"></a>
+    <div class="container colmlist">
+        <h2 class="sectiontitle wow flipInX text-center">The Team</h2>
+        <ul class="nav nav-tabs wow fadeInUp" id="teammembers" style="display:none !important;">
+          <li class="active"><a href="#" role="all" >All</a></li>
+          <li ><a href="#" role="management">Management</a></li>
+          <li ><a href="#" role="media">Media</a></li>
+          <li ><a href="#" role="mobile">Mobile</a></li>
+          <li ><a href="#" role="clientrelation">Client Relations</a></li>
+          <li ><a href="#" role="business">Business Development</a></li>
+          <li ><a href="#" role="technology">Technology</a></li>
+          <li ><a href="#" role="admin">Admin</a></li>
+        </ul>
+        <ul class="teamlist">
+            <li class="member management">
+                <div class="memberdata">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/10412_10153822449794244_6203519293398914930_n.jpg?oh=1e4158009f24d10cedb37841447afd53&oe=595C7398" alt="Benjamin Abitbol">
+                    <div class="listoverlay">
+                        <div class="memberdetails">
+                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
+                            <span class="membername">Benjamin Abitbol</span>
+                            <span class="designation">Chief Executive Officer - Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+             <li class="member management">
+                <div class="memberdata">
+                    <img src="https://fb-s-c-a.akamaihd.net/h-ak-xaf1/v/t1.0-9/10540907_10203768385602524_6976244915155539027_n.jpg?oh=9bf450bb75185475dfa0d12fa5ed7cb9&oe=595B5F34&__gda__=1500462190_af361e820689c35e2f3c4747ad25eb72" alt="Gabriel Mimouni">
+                    <div class="listoverlay">
+                        <div class="memberdetails">
+                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
+                            <span class="membername">Gabriel Mimouni</span>
+                            <span class="designation">Chief Information Officer - Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </li>           
+              <li class="member management">
+                <div class="memberdata">
+                    <img src="http://i.imgur.com/2TMFGUU.jpg" alt="Aleksandra Godard">
+                    <div class="listoverlay">
+                        <div class="memberdetails">
+                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
+                            <span class="membername">Aleksandra Goddart</span>
+                            <span class="designation">Chief Technological Officer - Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </li>          
+            <li class="member">
+                <div class="memberdata">
+                    <a href="#career" class="iconyou">YOU</a>
+                </div>
+            </li>
+
+        </ul>
+    </div><!-- /.container -->
+</section>
+
+<!-- page4 -->
+<footer id="footer">
+        <div class="container">
+                <a href="#" class="footerlogo wow flipInX"><img class="imgposition" src="http://i.imgur.com/ZE5c5L7.jpg"></a>
+<!--                 <p class="sociallinks wow fadeInDown">
+                    <a target="_blank" href="https://www.facebook.com/InstantConnection" class="icon-fb">Like Us on Facebook</a>
+                    <a target="_blank" href="https://twitter.com/InstantConnection" class="icon-tw">Follow Us on Twitter</a>
+                    <a target="_blank" href="https://www.linkedin.com/company/InstantConnection" class="icon-in">Follow Us on LinkedIn</a>
+                </p> -->
+                <p class="flinks wow fadeInDown">
+                    7 Hapelech St. Tel Aviv IL <span class="sep">.</span> <span>(IL) 972 055 668 0262</span> <span class="sep">.</span> <span>(FR) 33 6 17 47 66 87</span> <span class="sep">.</span> <a herf="mailto:info@branovate.com">info@instantconnection.com</a><br>
+                </p>
+                <p class="credits wow fadeInDown">
+                    Copyright © 2017 InstantConnection Ltd <span class="sep">.</span> All rights reserved <span class="sep">.</span> <a herf="#">Privacy Policy</a>
+                </p>
+        </div><!-- /.container -->
+</footer><!-- /#footer -->
+
+    <script src="script.js"></script>
+	<script src="style.css"></script>
     <script src="angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="services/mainservices.js"></script>
