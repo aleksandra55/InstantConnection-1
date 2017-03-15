@@ -1,9 +1,14 @@
-
+body{
+  height: auto;
+  width: auto;
+}
 
 #header{
-  height: 800px;
-  background-image: url(https://previews.123rf.com/images/halfpoint/halfpoint1501/halfpoint150100352/35800812-Bureau-m-lange-sur-une-table-en-bois-de-bureau-fond-Vue-de-dessus--Banque-d%27images.jpg);
+  height: 600px;
+  background-image: url(http://i.imgur.com/T0onoJS.jpg);
 }
+
+
 h1{
   text-align: center;
   color:beige;
@@ -11,17 +16,22 @@ h1{
   display:none;
   width:600px;
   margin:auto;
-  font-family: ‘Roboto Slab’, serif;
+  font-family: 'Roboto Slab', serif;
+
+
 }
+
 h3{
   text-align: center;
-  font-family: ‘Indie Flower’, cursive;
+  font-family: 'Indie Flower', cursive;
   font-size: 60px;
   color: black;
   display:none;
   width:600px;
   margin:auto;
+
 }
+
 .job{
   text-align: center;
   font-size: 30px;
@@ -30,10 +40,19 @@ h3{
   margin: auto;
   padding-top: 70px;
 }
-.column2{
-  height: 400px;
-  border-color: white;
+
+.btn{
+    text-align: center;
+
 }
+
+#faces{
+  height: 400px;
+
+}
+
+
 #footer{
-  height: 500px;
+  height: 200px;
+  background-color: red;
 }

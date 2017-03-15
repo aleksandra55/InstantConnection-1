@@ -2,10 +2,15 @@
 <html>
 <head>
 	<title>InstantConnection</title>
-	<link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
-</head>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+
 <body ng-app="InstantConnection">
  <div class="containe" ng-controller="profileController">
       <select id="test" ng-change="showIf()" ng-model="selectJob" >
@@ -22,7 +27,7 @@
         <h4>{{profile.job}}</h4>
         <h5>{{profile.description}}</h5>
       <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
- 
+
       <a href="{{profile.linkedin_url}}" target="_blank"><button class="linkedin" ng-click="next()"><i class="fa fa-heart-o fa-spin fa-5x fa-fw"></i><span class=“sr only”></span></button></a>
 
       <button class="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up fa-5x"></i>
@@ -32,7 +37,7 @@
  	</div>
  </div>
 
-
+		<script src="style.css"></script>
     <script src="angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="services/mainservices.js"></script>
