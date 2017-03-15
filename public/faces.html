@@ -7,16 +7,16 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
 </head>
 <body ng-app="InstantConnection">
-Hello!
+
  <div class="container" ng-controller="profileController">
  	<div ng-repeat="profile in allProfiles | filter: { category: by_colour " >
- 		<!-- <img ng-src="{{profile.image_url}}"> -->
+ 		<img ng-src="{{profile.image_url}}">
         <h3>{{profile.name}}</h3>
         <h4>{{profile.job}}</h4>
         <h5>{{profile.description}}</h5>
 	  <button class="remove"><i class="fa fa-times fa-5x"></i></button>
  
-      <button class="linkedin"><i class="fa fa-heart-o fa-spin fa-5x fa-fw"></i><span class=“sr only”></span></button>
+      <button class="linkedin"><i class="fa fa-heart-o fa-5x "></i></button>
 
       <button class="like"><i class="fa fa-thumbs-up fa-5x"></i>
  	</div>
