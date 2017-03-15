@@ -1,4 +1,4 @@
-app.controller('profileController', function($scope,profileService) {
+app.controller('profileController', function($scope,$window,profileService) {
 
 	$scope.allProfiles = profileService.allProfiles;
 	$scope.jobIndex = 0;
@@ -64,24 +64,11 @@ app.controller('profileController', function($scope,profileService) {
         }
     };
 
-        $scope.next2 = function() {
-        if ($scope.jobIndex >= $scope.allProfiles.length -1) {
-            $scope.jobIndex = 0;
-        }
-        else {
-            $scope.jobIndex ++;
-        }
-    };
 
-        $scope.next3 = function($scope, $window) {
-        if ($scope.jobIndex >= $scope.allProfiles.length -1) {
-        	$window.alert("greeting");
-            $scope.jobIndex = 0;
-        }
-        else {
-            $scope.jobIndex ++;
-        }
-    };
+
+        $scope.OpenPopupWindow = function () {
+        	$window.open("//localhost:8000/sendmail.html", "popup", "width=500,height=200,left=10,top=150");
+           }
 
 
     $scope.choose = function(profile) {

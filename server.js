@@ -1,5 +1,15 @@
 var express = require('express');
+var nodemailer = require('nodemailer');
 var app = express();
+// app.set('view engine', 'html');
+var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    auth: {
+        user: "ben@gigaspaces.com",
+        pass: "Coucoulol2"
+    }
+});
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/profiles');
@@ -64,6 +74,35 @@ app.put('/profiles/:id', function(req, res, next) {
   });
 });
 
+
+/*------------------Routing Started ------------------------*/
+
+app.get('/',function(req,res){
+    res.sendfile('localhost:8000/sendmail.html');
+});
+app.get('/sendmail',function(req,res){
+    var mailOptions={
+        to : req.query.to,
+        subject : req.query.subject,
+        text : req.query.text
+    }
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(error, response){
+     if(error){
+            console.log(error);
+        res.end("error");
+     }else{
+            console.log("Message sent: " + response.message);
+        res.end("sent");
+         }
+});
+// res.end("sent");
+});
+
+/*--------------------Routing Over----------------------------*/
+
+
+
 // error handler to catch 404 and forward to main error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -75,11 +114,17 @@ app.use(function(req, res, next) {
 // warning - not for use in production code!
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
+  res.send({
     message: err.message,
     error: err
   });
 });
+
+
+
+
+
+
 
 app.listen('8000', function() {
   console.log("Hackaton baby");
