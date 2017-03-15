@@ -22,7 +22,7 @@
     <div class="job">
       <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Indie Flower',cursive; font-size:36px;">
 
-      <OPTION >Web Developper</OPTION>
+      <OPTION>Web Developper</OPTION>
       <OPTION >Plumber</OPTION>
       <OPTION >Dancer</OPTION>
       <OPTION >Gardener</OPTION>
@@ -35,20 +35,30 @@
 </section>
 
 <!-- page2 -->
-<section class="page2">
+<section class="page2" >
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
-        <img ng-src="{{profile.image_url}}">
-        <h3>{{profile.name}}</h3>
-        <h4>{{profile.job}}</h4>
-        <h5>{{profile.description}}</h5>
-      <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
+        <div id="cssimage">
+          <img ng-src="{{profile.image_url}}">
+        
+          
+            <h3>{{profile.name}}</h3>
+            <h4>{{profile.job}}</h4>
+            <h5>{{profile.description}}</h5>
 
-      <a href="{{profile.linkedin_url}}" target="_blank"><button class="linkedin" ng-click="next()"><i class="fa fa-heart-o fa-spin fa-5x fa-fw"></i><span class=“sr only”></span></button></a>
+        </div>
 
-      <button class="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up fa-5x"></i>
+        <div id="jolibouton">
+          <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
+
+          <a href="{{profile.linkedin_url}}" target="_blank"><button class="linkedin" ng-click="next()"><i class="fa fa-heart-o fa-5x"></i><span class=“sr only”></span></button></a>
+
+          <button class="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up fa-5x"></i>
+        </div>
+
     </div>
-    </div>
+
+  </div>
 
  	</div>
  </div>
