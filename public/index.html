@@ -14,15 +14,28 @@
 <body ng-app="InstantConnection" ng-controller="profileController">
 
 <!-- page1 -->
- <div class="container">
-      <select id="test" ng-change="showIf()" ng-model="selectJob" >
+<section>
+<div class="header">
+    <div class="container-fluid">
+     <h1> Welcome to the Instant.Connection </h1>
+     <h3>I’m looking for ...</h3>
+    <div class="job">
+      <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Indie Flower',cursive; font-size:36px;">
+
       <OPTION >Web Developper</OPTION>
       <OPTION >Plumber</OPTION>
       <OPTION >Dancer</OPTION>
       <OPTION >Gardener</OPTION>
+
       </select>
-      
+
+</div>
+</div>
+</div>
+</section>
+
 <!-- page2 -->
+<section class="page2">
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
         <img ng-src="{{profile.image_url}}">
@@ -39,6 +52,7 @@
 
  	</div>
  </div>
+ </section>
 
 <!-- page3 -->
 <section class="section btop" id="theteam"><a name="theteam"></a>

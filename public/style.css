@@ -1,13 +1,16 @@
-body {
-  height: auto;
-  width: auto;
+.profile{
+  float: left;
 }
 
-#header{
-  height: 600px;
-  background-image: url(http://i.imgur.com/T0onoJS.jpg);
+
+.header {
+height: 800px;
+background-image: url(http://i.imgur.com/T0onoJS.jpg);	
 }
 
+#test {
+	text-align: center;
+}
 
 h1{
   text-align: center;
@@ -36,14 +39,10 @@ h3{
   text-align: center;
   font-size: 30px;
   display:none;
-  width:600px;
+  width: 600px;
   margin: auto;
   padding-top: 70px;
-}
-
-.btn{
-    text-align: center;
-
+  margin-bottom: 20px;
 }
 
 
