@@ -10,6 +10,7 @@ background-image: url(http://i.imgur.com/T0onoJS.jpg);
 
 #test {
 	text-align: center;
+	margin-left:70px;
 }
 
 .page2{
@@ -18,12 +19,20 @@ background-image: url(http://i.imgur.com/T0onoJS.jpg);
 }
 h1{
   text-align: center;
-  color:beige;
-  font-size: 80px;
+  color:yellow;
+  font-size: 60px;
   display:none;
   width:600px;
   margin:auto;
   font-family: 'Roboto Slab', serif;
+  padding: 50px;
+}
+.description{
+	margin-top:50px;
+}
+
+.title{
+ padding-left: 22px;
 }
 
 h3{
@@ -34,6 +43,7 @@ h3{
   display:none;
   width:600px;
   margin:auto;
+  padding-left: 100px;
 }
 
 h4{
