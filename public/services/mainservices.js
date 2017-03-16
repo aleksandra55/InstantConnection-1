@@ -1,15 +1,74 @@
 app.service('profileService', function($http){
   var profileService = new Object();
   profileService.allProfiles =  [
-		// {img:"https://cdn.beeradvocate.com/im/beers/78820.jpg",name:"Kentucky Brunch Brand Stout", style:"American Double / Imperial Stout", abv:12, ratings:[],averageRating:0},
-  //   {img:"https://cdn.beeradvocate.com/im/beers/136936.jpg",name:"Good Morning", style:"American Double / Imperial Stout ", abv:8.4,ratings:[], averageRating:0},
-  //   {img:"https://cdn.beeradvocate.com/im/beers/87846.jpg",name:"King Julius", style:"American Double / Imperial IPA ", abv:8.3,ratings:[], averageRating:0},
-  //   {img:"https://cdn.beeradvocate.com/im/beers/146770.jpg",name:"Very Hazy", style:"American Double / Imperial IPA ", abv:8.6,ratings:[], averageRating:0},
-  //   {img:"https://cdn.beeradvocate.com/im/beers/21690.jpg",name:"Pliny The Younger", style:"American Double / Imperial IPA ", abv:10.0,ratings:[], averageRating:0}
-	];
+{
+"_id": "58c7c7850e8c263fd81926aa",
+"name": "Brandon Bledsoe",
+"job": "Plumber",
+"image_url": "https://preview.ibb.co/mwXebF/MG_1186.jpg",
+"description": "Ex Navy Seal, Currently saving kittens to build a better world",
+"linkedin_url": "https://www.linkedin.com/in/brandon-bledsoe-b2171099/",
+"__v": 0
+},
+{
+"_id": "58c7c8df0e8c263fd81926ab",
+"name": "Aaron Weiss",
+"job": "web developper",
+"image_url": "https://image.ibb.co/cNd7Va/MG_1309.jpg",
+"description": "Always here if you need me !",
+"linkedin_url": "",
+"__v": 0,
+"mailLink": "gabmimouni@gmail.com"
+},
+{
+"_id": "58c7ca6d0e8c263fd81926ac",
+"name": "Hadas Shamir",
+"job": "Dancer",
+"image_url": "https://preview.ibb.co/dbNO3v/MG_1376.jpg",
+"description": "The dancing queen",
+"linkedin_url": "https://www.linkedin.com/in/hadas-shamir-92957348/",
+"__v": 0
+},
+{
+"_id": "58c7cc100e8c263fd81926ad",
+"name": "Steven Winston",
+"job": "Web Developper",
+"image_url": "https://preview.ibb.co/mFtViv/MG_1575.jpg",
+"description": "Scottish kitten lover",
+"linkedin_url": "https://www.linkedin.com/in/stevenwinston/",
+"__v": 0
+},
+{
+"_id": "58c7ce090e8c263fd81926ae",
+"name": "Arik Aviv",
+"job": "Web Developper",
+"image_url": "https://preview.ibb.co/e871qa/MG_1247.jpg",
+"description": "The coding master",
+"linkedin_url": "https://www.linkedin.com/in/arik-aviv-54b096139/",
+"__v": 0
+},
+{
+"_id": "58c7feccb109452680f782f5",
+"name": "Mati Borlak",
+"job": "Web Developper",
+"image_url": "https://image.ibb.co/mCjgqa/MG_1297.jpg",
+"description": "JavaScript genius",
+"linkedin_url": "https://www.linkedin.com/in/mati-borlak-1b9247135/",
+"__v": 0
+},
+{
+"_id": "58c8000bb109452680f782f6",
+"name": "Nate Chesley",
+"job": "Architect",
+"image_url": "https://image.ibb.co/jHXqiv/MG_1298.jpg",
+"description": "I'm really good at what I do, and I look like Ryan Gosling",
+"linkedin_url": "https://www.linkedin.com/in/nate-chesley-9a366a5/",
+"__v": 0
+}
+]
 
 
-//   var test = "Im alive from the service"; 
+//   var test = "Im alive from the service";
 
 //   beerService.addToMyCollection = function(beer){
 //     // console.log(beers);
