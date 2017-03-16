@@ -16,7 +16,7 @@ app.controller('profileController', function($scope,$window,profileService) {
 		$scope.jobIndex = 0;
 	}
 
- 	$scope.allProfiless = profileService.getProfiles().then(function(response){
+ 	$scope.allProfiles = profileService.getProfiles().then(function(response){
  		console.log(response);
  	},function(err){
  		console.error(err);
