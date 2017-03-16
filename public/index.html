@@ -21,12 +21,10 @@
      <h3 class="description">I’m looking for ...</h3>
     <div class="job">
       <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Indie Flower',cursive; font-size:36px;">
-
       <OPTION>Web Developper</OPTION>
       <OPTION >Plumber</OPTION>
       <OPTION >Dancer</OPTION>
       <OPTION >Gardener</OPTION>
-
       </select>
 
 </div>
@@ -34,20 +32,25 @@
 </div>
 </section>
 
-<!-- page2 -->
+
+
 <section class="page2" >
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
-        <div id="cssimage">
+<!--         <div id="cssimage">
           <img ng-src="{{profile.image_url}}">
-        
-          
             <h3>{{profile.name}}</h3>
             <h4>{{profile.job}}</h4>
             <h5>{{profile.description}}</h5>
-
-        </div>
-
+        </div> -->
+  <div class="tbgwrap">
+    <div class="tphoto">
+      <img ng-src="{{profile.image_url}}"/>
+      <div class="tname">{{profile.name}}</div>
+      <div class="tjob">{{profile.job}}</div>
+      <div class="tdescription">{{profile.description}}</div>
+    </div>
+  </div>
         <div id="jolibouton">
           <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
 

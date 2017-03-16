@@ -14,8 +14,7 @@ background-image: url(http://i.imgur.com/T0onoJS.jpg);
 }
 
 .page2{
-	padding: 50px;
-	background: grey;
+	padding: 20px;
 }
 h1{
   text-align: center;
@@ -337,4 +336,66 @@ ul, ol {
 	margin: inherit;
 	color: inherit;
 	margin-top: 8px;
+}
+
+/* Page2 */
+
+.tbgwrap { 
+	padding-top: 15px;
+    width: 400px;
+    height: 430px;
+    background-color: #fff;
+    margin:auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border: 1px solid #c0c0c0;
+     }
+
+.tphoto {
+/*    width: 350px;
+    height: 350px;
+	margin: auto;
+	overflow: hidden;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #c0c0c0;
+    background-size: cover;
+	background-repeat: no-repeat;*/
+}
+.tphoto img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:315px;
+	height:315px;
+	border:1px solid #a6a9aa;
+	border-radius: 8px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 0px 1px 7px 0px #cfcfcf;
+}
+.tname {
+    padding-left: 50px;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+.tjob { 
+	font-weight: 100;
+	padding-left: 50px;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+     }
+
+.tdescription {
+	padding-left: 50px;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 12px;
+	text-align: justify;
+	width:315px;
 }
