@@ -4,10 +4,16 @@
 	<title>InstantConnection</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
+
+    <link href=“https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab” rel=“stylesheet”>
+    <link href=“https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab” rel=“stylesheet”>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Raleway|Roboto+Slab" rel="stylesheet">
+ <link href=“https://fonts.googleapis.com/css?family=Libre+Baskerville” rel=“stylesheet”>
+ <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Dancing+Script" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+ <link href=“https://fonts.googleapis.com/css?family=Courgette” rel=“stylesheet”>
+ <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
 
@@ -20,11 +26,12 @@
      <h1 class="title">INSTANTCONNECTION</h1>
      <h3 class="description">I’m looking for ...</h3>
     <div class="job">
-      <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Indie Flower',cursive; font-size:36px;">
-      <OPTION>Web Developper</OPTION>
+      <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Libre Baskerville',serif; font-size:36px;" class="scrolling">
+      <OPTION >Web Developper</OPTION>
       <OPTION >Plumber</OPTION>
       <OPTION >Dancer</OPTION>
       <OPTION >Gardener</OPTION>
+      <OPTION >Architect</OPTION>
       </select>
 
 </div>
@@ -34,7 +41,7 @@
 
 
 
-<section class="page2" >
+<section class="page2" name="scrolling">
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
 <!--         <div id="cssimage">
@@ -44,20 +51,27 @@
             <h5>{{profile.description}}</h5>
         </div> -->
   <div class="tbgwrap">
-    <div class="tphoto">
+    <div class="tphoto" id="selectedOne">
       <img ng-src="{{profile.image_url}}"/>
       <div class="tname">{{profile.name}}</div>
       <div class="tjob">{{profile.job}}</div>
       <div class="tdescription">{{profile.description}}</div>
     </div>
   </div>
-        <div id="jolibouton">
+<!--         <div id="jolibouton">
           <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
 
           <a href="{{profile.linkedin_url}}" target="_blank"><button class="linkedin" ng-click="next()"><i class="fa fa-heart-o fa-5x"></i><span class=“sr only”></span></button></a>
 
           <button class="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up fa-5x"></i>
-        </div>
+        </div> -->
+        <div id="jolibouton">
+         <id="remove" class="remove" ng-click="next()" style="color:red;"><i class="fa fa-times fa-5x"></i></id>
+
+         <a href="{{profile.linkedin_url}}" target="_blank"> <id="linkedin" class="linkedin" ng-click="next()" style="color:pink;"><i class="fa fa-heart-o fa-5x"></i><span class="sr only"></span></id></a>
+
+         <id="like" class="like" ng-click="OpenPopupWindow();next()" style="color:green;" ><i class="fa fa-thumbs-up fa-5x"></i></id>
+       </div>
 
     </div>
 
@@ -70,7 +84,7 @@
 <!-- page3 -->
 <section class="section btop" id="theteam"><a name="theteam"></a>
     <div class="container colmlist">
-        <h2 class="sectiontitle wow flipInX text-center">The Team</h2>
+        <h2 class="sectiontitle wow flipInX text-center title2">The Team</h2>
         <ul class="nav nav-tabs wow fadeInUp" id="teammembers" style="display:none !important;">
           <li class="active"><a href="#" role="all" >All</a></li>
           <li ><a href="#" role="management">Management</a></li>

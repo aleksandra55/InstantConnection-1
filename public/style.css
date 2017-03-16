@@ -11,6 +11,7 @@ background-image: url(http://i.imgur.com/T0onoJS.jpg);
 #test {
 	text-align: center;
 	margin-left:70px;
+
 }
 
 .page2{
@@ -18,7 +19,7 @@ background-image: url(http://i.imgur.com/T0onoJS.jpg);
 }
 h1{
   text-align: center;
-  color:yellow;
+  color:#FFFF99;
   font-size: 60px;
   display:none;
   width:600px;
@@ -28,15 +29,18 @@ h1{
 }
 .description{
 	margin-top:50px;
+	font-family: 'Indie Flower', cursive;
 }
 
 .title{
- padding-left: 22px;
+	font-size:70px;
+ 
+ margin-left: 200px;
 }
 
 h3{
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Playfair Display SC', serif;
   font-size: 60px;
   color: black;
   display:none;
@@ -47,7 +51,7 @@ h3{
 
 h4{
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 30px;
   color: black;
   width:600px;
@@ -56,7 +60,8 @@ h4{
 
 h5{
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+font-family:'Cormorant Garamond', serif;
+ font-family: 'Dancing Script', cursive;
   font-size: 12px;
   color: black;
   width:600px;
@@ -91,7 +96,7 @@ h5{
 	border-radius: 8px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	box-shadow: 0px 1px 7px 0px #cfcfcf;
+	box-shadow: 0px 1px 30px 0px #cfcfcf;
 }
 
 
@@ -99,6 +104,9 @@ h5{
 /* Team Section CSS*/
 .teamlist {
 	padding: 40px 0 0;
+}
+.title2 {
+	font-family: 'Playfair Display SC'
 }
 .teamlist li {
 	width: 25%;
@@ -343,7 +351,7 @@ ul, ol {
 .tbgwrap { 
 	padding-top: 15px;
     width: 400px;
-    height: 430px;
+    height: 440px;
     background-color: #fff;
     margin:auto;
     border-radius: 10px;
@@ -351,6 +359,7 @@ ul, ol {
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
     border: 1px solid #c0c0c0;
+     box-shadow: 8px 8px 8px #c0c0c0;
      }
 
 .tphoto {
@@ -381,21 +390,24 @@ ul, ol {
 	box-shadow: 0px 1px 7px 0px #cfcfcf;
 }
 .tname {
-    padding-left: 50px;
-    font-size: 20px;
-    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', sans-serif;
 }
 .tjob { 
-	font-weight: 100;
-	padding-left: 50px;
-    font-size: 20px;
-    font-family: 'Helvetica', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 28px;
+    font-family: 'Cormorant Garamond', sans-serif;
      }
 
 .tdescription {
-	padding-left: 50px;
-	font-family: 'Helvetica', sans-serif;
-	font-size: 12px;
-	text-align: justify;
-	width:315px;
+	
+	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Dancing Script', cursive;
+	font-size: 18px;
+	font-weight: 200;
+	text-align: center;
+	/*width:315px;*/
+	font-weight: bold;
 }

@@ -1,4 +1,4 @@
-app.controller('profileController', function($scope,$window,profileService) {
+app.controller('profileController', function($scope,$window,profileService, $location, $anchorScroll) {
 
 	$scope.allProfiles = profileService.allProfiles;
 	$scope.jobIndex = 0;
@@ -31,6 +31,7 @@ app.controller('profileController', function($scope,$window,profileService) {
 	// }
 
 
+
 	// $scope.test = beerService.test;
 
 	$scope.show = false ;
@@ -38,10 +39,21 @@ app.controller('profileController', function($scope,$window,profileService) {
 	$scope.showIf = function () {
 		if (!$scope.show) {
 			$scope.show = true;
+			
+
 		} //else {
 		// 	$scope.show = true;
 		// }
 		$scope.jobIndex = 0;
+
+		
+      // call $anchorScroll()
+      		$location.hash("");
+			$location.hash('selectedOne');
+
+      // call $anchorScroll()
+      		$anchorScroll();
+
 	}
 
  	$scope.allProfiless = profileService.getProfiles().then(function(response){
