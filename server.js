@@ -12,7 +12,7 @@ var smtpTransport = nodemailer.createTransport({
 });
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/profiles');
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/profiles');
 
 var Profile = require("./ProfileModel");
 
@@ -126,6 +126,6 @@ app.use(function(err, req, res, next) {
 
 
 
-app.listen('8000', function() {
+app.listen(process.env.PORT || '8080', function() {
   console.log("Hackaton baby");
 });
