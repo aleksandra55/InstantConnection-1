@@ -3,36 +3,6 @@ app.controller('profileController', function($scope,$window,profileService, $loc
 	$scope.allProfiles = profileService.allProfiles;
 	$scope.jobIndex = 0;
 
-	// $scope.addToMyCollection = function(){
-	// 	var beer = {name: $scope.name,
-	// 		style: $scope.style,
-	// 		abv: $scope.abv,
-	// 		img: $scope.img,
-	// 		rating: $scope.rating
-	// 	};
-
-	// 	beerService.addToMyCollection(beer);
-	// }	
-
-
-	// $scope.removeFromMyCollection = function(beer){
-	// 	beerService.removeFromMyCollection(beer);
-	// }
-
-
-
-	// $scope.addRatingToBeer = function (beer,rating) {
-	// 	beerService.addRatingToBeer(beer,Number(rating));
-	// }
-
-
-	// $scope.sortByRating = function (beer) {
-	// 	beerService.sortByRating(beer);
-	// }
-
-
-
-	// $scope.test = beerService.test;
 
 	$scope.show = false ;
 
@@ -41,9 +11,7 @@ app.controller('profileController', function($scope,$window,profileService, $loc
 			$scope.show = true;
 			
 
-		} //else {
-		// 	$scope.show = true;
-		// }
+		} 
 		$scope.jobIndex = 0;
 
 		

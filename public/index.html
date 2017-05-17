@@ -23,15 +23,16 @@
 <section>
 <div class="header">
     <div class="container-fluid">
-     <h1 class="title">INSTANTCONNECTION</h1>
-     <h3 class="description">I’m looking for ...</h3>
+     <h1 class="title"><img class="logo" src="https://img15.hostingpics.net/pics/736352NewYorkcity.jpg"></h1>
+
     <div class="job">
-      <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Libre Baskerville',serif; font-size:36px;" class="scrolling">
-      <OPTION >Web Developper</OPTION>
-      <OPTION >Plumber</OPTION>
-      <OPTION >Dancer</OPTION>
-      <OPTION >Gardener</OPTION>
-      <OPTION >Architect</OPTION>
+      <select id="test" ng-change="showIf()" ng-model="selectJob" style="width: 500px; height: 70px; font-family:'Libre Baskerville',serif; font-size:36px;margin-left: 385px;" class="scrolling">
+       <em> <option value="" selected disabled>I'm looking for...</option></em>
+      <OPTION ui-sref="profiledisplay" >Web Developper</OPTION>
+      <OPTION ui-sref="profiledisplay">Plumber</OPTION>
+      <OPTION ui-sref="profiledisplay">Dancer</OPTION>
+      <OPTION ui-sref="profiledisplay">Gardener</OPTION>
+      <OPTION ui-sref="profiledisplay">Architect</OPTION>
       </select>
 
 </div>
@@ -41,37 +42,36 @@
 
 
 
-<section class="page2" name="scrolling">
+<section class="page2" name="scrolling" id="profiledisplay">
 <div ng-if="show" ng-repeat="profile in allProfiles | filter: { job: selectJob } " >
     <div ng-if="jobIndex == $index">
-<!--         <div id="cssimage">
-          <img ng-src="{{profile.image_url}}">
-            <h3>{{profile.name}}</h3>
-            <h4>{{profile.job}}</h4>
-            <h5>{{profile.description}}</h5>
-        </div> -->
+
   <div class="tbgwrap">
+
+
     <div class="tphoto" id="selectedOne">
+<div id="people">
+  <div class="person">
       <img ng-src="{{profile.image_url}}"/>
       <div class="tname">{{profile.name}}</div>
       <div class="tjob">{{profile.job}}</div>
-      <div class="tdescription">{{profile.description}}</div>
+     <!--  <div class="tdescription">{{profile.description}}</div> -->
     </div>
   </div>
-<!--         <div id="jolibouton">
-          <button class="remove" ng-click="next()"><i class="fa fa-times fa-5x"></i></button>
+<div id="control">
+ <div id="jolibouton">
+         
+          <button type="button" id="remove" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove" ng-click="next()"></i></button>
 
-          <a href="{{profile.linkedin_url}}" target="_blank"><button class="linkedin" ng-click="next()"><i class="fa fa-heart-o fa-5x"></i><span class=“sr only”></span></button></a>
+        
+         <a href="{{profile.linkedin_url}}" target="_blank"><button type="button" class="btn btn-danger btn-circle btn-xl" id="linkedin" ng-click="next()"><i class="glyphicon glyphicon-heart"></i></button></a>
 
-          <button class="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up fa-5x"></i>
-        </div> -->
-        <div id="jolibouton">
-         <id="remove" class="remove" ng-click="next()" style="color:red;"><i class="fa fa-times fa-5x"></i></id>
+          
 
-         <a href="{{profile.linkedin_url}}" target="_blank"> <id="linkedin" class="linkedin" ng-click="next()" style="color:pink;"><i class="fa fa-heart-o fa-5x"></i><span class="sr only"></span></id></a>
-
-         <id="like" class="like" ng-click="OpenPopupWindow();next()" style="color:green;" ><i class="fa fa-thumbs-up fa-5x"></i></id>
-       </div>
+          <button type="button" class="btn btn-success btn-circle btn-xl" id="like" ng-click="OpenPopupWindow();next()"><i class="fa fa-thumbs-up"></i></button>
+       </div></div>
+    </div>
+  </div>
 
     </div>
 
@@ -82,77 +82,15 @@
  </section>
 
 <!-- page3 -->
-<section class="section btop" id="theteam"><a name="theteam"></a>
-    <div class="container colmlist">
-        <h2 class="sectiontitle wow flipInX text-center title2">The Team</h2>
-        <ul class="nav nav-tabs wow fadeInUp" id="teammembers" style="display:none !important;">
-          <li class="active"><a href="#" role="all" >All</a></li>
-          <li ><a href="#" role="management">Management</a></li>
-          <li ><a href="#" role="media">Media</a></li>
-          <li ><a href="#" role="mobile">Mobile</a></li>
-          <li ><a href="#" role="clientrelation">Client Relations</a></li>
-          <li ><a href="#" role="business">Business Development</a></li>
-          <li ><a href="#" role="technology">Technology</a></li>
-          <li ><a href="#" role="admin">Admin</a></li>
-        </ul>
-        <ul class="teamlist">
-            <li class="member management">
-                <div class="memberdata">
-                    <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/10412_10153822449794244_6203519293398914930_n.jpg?oh=1e4158009f24d10cedb37841447afd53&oe=595C7398" alt="Benjamin Abitbol">
-                    <div class="listoverlay">
-                        <div class="memberdetails">
-                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
-                            <span class="membername">Benjamin Abitbol</span>
-                            <span class="designation">Chief Executive Officer - Co-Founder</span>
-                        </div>
-                    </div>
-                </div>
-            </li>
-             <li class="member management">
-                <div class="memberdata">
-                    <img src="https://fb-s-c-a.akamaihd.net/h-ak-xaf1/v/t1.0-9/10540907_10203768385602524_6976244915155539027_n.jpg?oh=9bf450bb75185475dfa0d12fa5ed7cb9&oe=595B5F34&__gda__=1500462190_af361e820689c35e2f3c4747ad25eb72" alt="Gabriel Mimouni">
-                    <div class="listoverlay">
-                        <div class="memberdetails">
-                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
-                            <span class="membername">Gabriel Mimouni</span>
-                            <span class="designation">Chief Information Officer - Co-Founder</span>
-                        </div>
-                    </div>
-                </div>
-            </li>           
-              <li class="member management">
-                <div class="memberdata">
-                    <img src="http://i.imgur.com/2TMFGUU.jpg" alt="Aleksandra Godard">
-                    <div class="listoverlay">
-                        <div class="memberdetails">
-                            <a href="https://il.linkedin.com/pub/roee-lichtenfeld/3/438/34" target="_blank" class="iclinkedin">Visit LinkedIn Profile</a>
-                            <span class="membername">Aleksandra Goddart</span>
-                            <span class="designation">Chief Technological Officer - Co-Founder</span>
-                        </div>
-                    </div>
-                </div>
-            </li>          
-            <li class="member">
-                <div class="memberdata">
-                    <a href="#career" class="iconyou">YOU</a>
-                </div>
-            </li>
+<!-- /.container -->
 
-        </ul>
-    </div><!-- /.container -->
-</section>
 
 <!-- page4 -->
 <footer id="footer">
         <div class="container">
-                <a href="#" class="footerlogo wow flipInX"><img class="imgposition" src="http://i.imgur.com/ZE5c5L7.jpg"></a>
-<!--                 <p class="sociallinks wow fadeInDown">
-                    <a target="_blank" href="https://www.facebook.com/InstantConnection" class="icon-fb">Like Us on Facebook</a>
-                    <a target="_blank" href="https://twitter.com/InstantConnection" class="icon-tw">Follow Us on Twitter</a>
-                    <a target="_blank" href="https://www.linkedin.com/company/InstantConnection" class="icon-in">Follow Us on LinkedIn</a>
-                </p> -->
+               
                 <p class="flinks wow fadeInDown">
-                    7 Hapelech St. Tel Aviv IL <span class="sep">.</span> <span>(IL) 972 055 668 0262</span> <span class="sep">.</span> <span>(FR) 33 6 17 47 66 87</span> <span class="sep">.</span> <a herf="mailto:info@branovate.com">info@instantconnection.com</a><br>
+                    7 Hapelech St. Tel Aviv IL <span class="sep">.</span> <span>(IL) 972 055 668 0262</span> <span class="sep">.</span> <span>(FR) 33 6 17 47 66 87</span> <span class="sep">.</span> <a herf="mailto:info@instantconnection.com">info@instantconnection.com</a><br>
                 </p>
                 <p class="credits wow fadeInDown">
                     Copyright © 2017 InstantConnection Ltd <span class="sep">.</span> All rights reserved <span class="sep">.</span> <a herf="#">Privacy Policy</a>
