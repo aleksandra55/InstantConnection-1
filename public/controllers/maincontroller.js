@@ -47,7 +47,7 @@ app.controller('profileController', function($scope,$window,profileService, $loc
 
 
         $scope.OpenPopupWindow = function () {
-        	$window.open("//localhost:8000/sendmail.html", "popup", "width=500,height=200,left=10,top=150");
+        	$window.open("//localhost:8080/sendmail.html", "popup", "width=500,height=200,left=10,top=150");
            }
 
 
